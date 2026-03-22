@@ -57,9 +57,9 @@ export function SigninForm({ className, ...props }: React.ComponentProps<"div">)
                   />
                 </a>
 
-                <h1 className="text-2xl font-bold">Chào mừng quay lại</h1>
+                <h1 className="text-2xl font-bold">Welcome back</h1>
                 <p className="text-muted-foreground text-balance">
-                  Đăng nhập vào tài khoản Moji của bạn
+                  Sign In to your ChatsApp
                 </p>
               </div>
 
@@ -69,12 +69,12 @@ export function SigninForm({ className, ...props }: React.ComponentProps<"div">)
                   htmlFor="username"
                   className="block text-sm"
                 >
-                  Tên đăng nhập
+                  Username
                 </Label>
                 <Input
                   type="text"
                   id="username"
-                  placeholder="moji"
+                  placeholder="ChatsApp"
                   {...register("username")}
                 />
                 {errors.username && (
@@ -90,7 +90,7 @@ export function SigninForm({ className, ...props }: React.ComponentProps<"div">)
                   htmlFor="password"
                   className="block text-sm"
                 >
-                  Mật khẩu
+                  Password
                 </Label>
                 <Input
                   type="password"
@@ -110,16 +110,16 @@ export function SigninForm({ className, ...props }: React.ComponentProps<"div">)
                 className="w-full"
                 disabled={isSubmitting}
               >
-                Đăng nhập
+                Sign In
               </Button>
 
               <div className="text-center text-sm">
-                Chưa có tài khoản?{" "}
+                Haven't Sign Up?{" "}
                 <a
                   href="/signup"
                   className="underline underline-offset-4"
                 >
-                  Đăng ký
+                  Sign Up
                 </a>
               </div>
             </div>
@@ -134,8 +134,8 @@ export function SigninForm({ className, ...props }: React.ComponentProps<"div">)
         </CardContent>
       </Card>
       <div className=" text-xs text-balance px-6 text-center *:[a]:hover:text-primary text-muted-foreground *:[a]:underline *:[a]:underline-offetset-4">
-        Bằng cách tiếp tục, bạn đồng ý với <a href="#">Điều khoản dịch vụ</a> và{" "}
-        <a href="#">Chính sách bảo mật</a> của chúng tôi.
+        By clicking continue, you agree to our terms <a href="#">Terms of Service</a> and{" "}
+        <a href="#">Privacy Policy</a> .
       </div>
     </div>
   );
